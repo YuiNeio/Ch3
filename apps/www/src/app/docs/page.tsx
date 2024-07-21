@@ -21,8 +21,8 @@ export default function Introduction() {
 
       <Pagination
         next={{
-          name: "Installation",
-          path: "/docs/installation",
+          name: "Feature",
+          path: "/docs/card",
         }}
       />
 
