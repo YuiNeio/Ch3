@@ -22,7 +22,7 @@ export default function Introduction() {
       <Pagination
         next={{
           name: "Feature",
-          path: "/neobruu/Card",
+          path: "/docs/installation",
         }}
       />
 
