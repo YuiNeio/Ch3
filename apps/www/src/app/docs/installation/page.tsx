@@ -7,9 +7,9 @@ export default function Installation() {
       <h2 className="text-4xl font-bold">Installation</h2>
 
       <div className="mt-8 text-lg font-light leading-relaxed">
-        These components are styled using{" "}
-        <a href="https://tailwindcss.com/" className="underline">
-          Tailwind CSS
+        Node.js dan npm: Pastikan Node.js dan npm (Node Package Manager) sudah terinstal di komputer Anda. Anda dapat mengunduh dan menginstalnya dari situs resmi{" "}
+        <a href="https://nodejs.org/en" className="underline">
+          Node.js
         </a>{" "}
         and feature icons powered by{" "}
         <a
@@ -33,23 +33,48 @@ export default function Installation() {
           <li>
             Install the required dependencies by running the following command:
             <Code
-              code={`npm install clsx tailwind-merge class-variance-authority
+              code={`mkdir chyper-bot
+cd chyper-bot
 # or
-pnpm add clsx tailwind-merge class-variance-authority`}
+npm install express body-parser`}
               header={"Terminal"}
             />
           </li>
           <li>
             Create a file named utils.ts and paste the following code:
             <Code
-              code={`// lib/utils/utils.ts
+              code={`// Import necessary libraries and modules
+const express = require('express');
+const bodyParser = require('body-parser');
 
-import { ClassValue, clsx } from 'clsx';
-import { twMerge } from 'tailwind-merge';
+// Create an instance of express
+const app = express();
+app.use(bodyParser.json());
 
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
+// Define a route to handle user inputs
+app.post('/chat', (req, res) => {
+    const userInput = req.body.message;
+    const botResponse = getBotResponse(userInput);
+    res.json({ response: botResponse });
+});
+
+// Function to generate bot responses
+function getBotResponse(input) {
+    // Placeholder response logic - customize this with NLP and AI integrations
+    if (input.toLowerCase().includes('hello')) {
+        return 'Hello! How can I assist you today?';
+    } else if (input.toLowerCase().includes('help')) {
+        return 'Sure, I am here to help! What do you need assistance with?';
+    } else {
+        return 'I am not sure how to respond to that. Can you please rephrase?';
+    }
 }
+
+// Start the server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Chyper Bot is running on port ${PORT}`);
+});
 `}
               header={"Terminal"}
             />
