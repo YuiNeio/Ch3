@@ -6,19 +6,17 @@ export default function Introduction() {
       <h2 className="text-4xl font-bold">Introduction</h2>
 
       <div className="mt-8 text-lg font-light leading-relaxed">
-        Neobrutalism components is a collection of type-safe components written
-        in React and Tailwind.
+        A crypter bot is an engineering or program designed for a specific use
         <br />
         <br />
-        Neobrutalism is a mix of regular brutalism in web design and more modern
-        typography, illustration and animation standards. <br /> Neobrutalism
+        This bot also uses various programming languages and has many features available. In the development stage, this bot is still in beta <br /> Chyper
         refuses the usual components of UX-UI design and embraces uncomfortable
         design elements, and it is more fearless to use distinctive color
         palettes.
         <br />
         <br />I created this collection of components for people who want to
-        learn more about neobrutalism style, and to help them get started with
-        creating neobrutalism layouts.
+        learn more about chyper style, and to help them get started with
+        creating chyper layouts.
       </div>
 
       <Pagination
