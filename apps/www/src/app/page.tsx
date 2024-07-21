@@ -12,12 +12,11 @@ export default function Home() {
         <div className="w-full max-w-2xl grid place-items-center gap-5">
           <div className="relative">
             <h1 className="text-2xl md:text-6xl text-center text-white font-black bg-[#4b42ff] py-2 px-5 shadow-[7px_7px_0px_0px_rgba(0,0,0,1)]">
-              Neo-Brutalism UI
+              Chyper - Bot AI Whatsapp
             </h1>
           </div>
           <p className="font-medium text-sm md:text-lg text-center tracking-tighter">
-            Discover bold and raw aesthetics components that you can copy and
-            paste into your apps. Accessible. Customizable. Open Source.
+            Chyper bot is an AI bot that was designed by someone and always gets updates & added features
           </p>
           <div className="flex flex-wrap justify-center gap-2.5 md:gap-5">
             <Link href={`/docs`}>
@@ -26,7 +25,7 @@ export default function Home() {
               </Button>
             </Link>
             <Link
-              href={`https://github.com/ivalshamkya/NeoBruu`}
+              href={`https://github.com/yuineoi`}
               target="_blank"
             >
               <Button variant="dark" rounded="lg">
